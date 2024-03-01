@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS Users (
     Nome TEXT NOT NULL,
     Email TEXT NOT NULL,
     CPF TEXT NOT NULL UNIQUE,    
-    Usuario TEXT NOT NULL,
+    Usuario TEXT NOT NULL UNIQUE,
     Senha TEXT NOT NULL
 )
 """)

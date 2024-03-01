@@ -29,8 +29,8 @@ class RecuperarSenha:
                     messagebox.showinfo(title='Aviso', message=f'Usuario e Senha enviado para o email:'
                                                                f'***{Verificador[2][3:]}')
                     # Configurando o envio de email
-                    remetente = 'Seuemail@gmail.com'
-                    senha = 'senha liberada do APP google'
+                    remetente = 'recuperarsenha750@gmail.com'
+                    senha = 'rnyu reva xoka klrg'
 
                     # Confiuração do destinatario e email
                     destinatario = Verificador[2]

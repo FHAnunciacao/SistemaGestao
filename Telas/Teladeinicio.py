@@ -1,6 +1,7 @@
 from Telas.Telacadastro import *
 from Telas.Telafuncoes import *
 from Telas.Recuperarsenha import *
+import os
 
 
 class TelaDeAcesso:
@@ -11,9 +12,13 @@ class TelaDeAcesso:
         self.janela.configure(background='white')
         self.janela.title('SISTEMA GERENCIADOR')
         self.janela.resizable(width=False, height=False)
-        self.janela.iconbitmap(default="Telas/icon.ico")
+        caminho_atualicon = os.path.dirname(os.path.abspath(__file__))
+        caminho_icon = os.path.join(caminho_atualicon, 'icon.ico')
+        self.janela.iconbitmap(default=caminho_icon)
         # aqui inseri a variavel logo para usar no frame da direita que irei criar para usar quando criar os Frame
-        logo = PhotoImage(file="Telas/caduceu.png")
+        caminho_atualfoto = os.path.dirname(os.path.abspath(__file__))
+        caminho_foto = os.path.join(caminho_atualfoto, 'caduceu.png')
+        logo = PhotoImage(file=caminho_foto)
         # Separação da janela principal em dois Frame
         LeftFrame = Frame(self.janela, width=200, height=600, bg=cyan)
         LeftFrame.pack(side=LEFT)
@@ -60,4 +65,3 @@ class TelaDeAcesso:
         RecuperarButton.place(x=375, y=390)
 
         self.janela.mainloop()
-
