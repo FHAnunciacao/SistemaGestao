@@ -36,7 +36,7 @@ class TelaCadastro:
                 self.Cadastro.destroy()  # fecha a tela depois de salvar os arquivos
 
             except sqlite3.IntegrityError:
-                messagebox.showerror(title='AVISO', message='CPF ja Cadastrado!!!')
+                messagebox.showerror(title='AVISO', message='CPF ja Cadastrado ou Usuário')
                 self.Cadastro.destroy()
 
         Label(self.Cadastro, text='Nome:', font=('Century Gothic', 15), bg='#344A53', fg='white').place(x=15, y=10)

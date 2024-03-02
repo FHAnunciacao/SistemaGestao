@@ -1,7 +1,6 @@
 import os.path
-
 from Telas import *
-from Database import *
+from Telas import interações
 
 
 class TelaDeFuncoes:
@@ -19,13 +18,27 @@ class TelaDeFuncoes:
                             fg=branco)
         TituloLabel.place(x=5, y=0)
 
+        # Daqui para cima foi criado apenas o layout da tela, as imagens e texto é apartir daqui
+
+        # Primeira utilidade adicionada ao meu menu principal podemos dizer
         CadastrarProdutoLabel = Label(DonwFrame, text='Cadastrar Produto',
                                       font=('Century Gothic', 10, 'bold'), bg=azulescuro, fg='white', cursor="hand2")
         CadastrarProdutoLabel.place(x=20, y=100)
+
+        # Irei criar varias funções chamando as telas de cada item do menu principal
+
+        # None para que só abra quando clicar
+        def abrir_cadastro(event=None):
+            cadastrar_produto = interações.CadastroProduto()
+            cadastrar_produto.iniciar()
 
         caminho_foto_cadastar = os.path.dirname(os.path.abspath(__file__))
         caminho_foto_cadastar_final = os.path.join(caminho_foto_cadastar, 'cadastrarproduto.png')
         ImagemCadastrarProduto = PhotoImage(file=caminho_foto_cadastar_final)
         FotoProdutoLabel = Label(DonwFrame, image=ImagemCadastrarProduto, bg=azulescuro, cursor='hand2')
         FotoProdutoLabel.place(x=45, y=10)
+        FotoProdutoLabel.bind("<Button-1>", abrir_cadastro)
+        # O bind não aceita retorno de class por isso foi feito função para chamar class
+
+
         self.telafuncoes.mainloop()

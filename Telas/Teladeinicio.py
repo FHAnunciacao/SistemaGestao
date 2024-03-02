@@ -28,7 +28,7 @@ class TelaDeAcesso:
         LogoLabel.place(x=30, y=150)
 
         def acessarsistema():
-
+            # Validando as informações para liberar o acesso do usuário
             UsuarioLogin = UserEntry.get()
             SenhaLogin = SenhaEntry.get()
             Database.cursor.execute("""
