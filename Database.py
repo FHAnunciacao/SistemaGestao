@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS Produtos (
     Marca TEXT NOT NULL,
     Tipo de Item TEXT NOT NULL,
     NCM TEXT NOT NULL,
-    CST TEXT NOT NULL
+    GTIN TEXT
 ) 
 """)
 

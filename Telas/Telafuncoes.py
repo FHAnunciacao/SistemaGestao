@@ -1,6 +1,6 @@
 import os.path
 from Telas import *
-from Telas import interações
+from Telas.interações import *
 
 
 class TelaDeFuncoes:
@@ -25,11 +25,11 @@ class TelaDeFuncoes:
                                       font=('Century Gothic', 10, 'bold'), bg=azulescuro, fg='white', cursor="hand2")
         CadastrarProdutoLabel.place(x=20, y=100)
 
-        # Irei criar varias funções chamando as telas de cada item do menu principal
+        # Irei criar várias funções chamando as telas de cada item do menu principal
 
         # None para que só abra quando clicar
         def abrir_cadastro(event=None):
-            cadastrar_produto = interações.CadastroProduto()
+            cadastrar_produto = CadastroProduto()
             cadastrar_produto.iniciar()
 
         caminho_foto_cadastar = os.path.dirname(os.path.abspath(__file__))
@@ -39,6 +39,5 @@ class TelaDeFuncoes:
         FotoProdutoLabel.place(x=45, y=10)
         FotoProdutoLabel.bind("<Button-1>", abrir_cadastro)
         # O bind não aceita retorno de class por isso foi feito função para chamar class
-
 
         self.telafuncoes.mainloop()

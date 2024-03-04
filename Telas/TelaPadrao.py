@@ -8,3 +8,6 @@ class Padrao:
         self.Padrao.geometry(geometry)
         self.Padrao.resizable(height=False, width=False)
         self.Padrao.configure(background=azulescuro)
+
+
+
