@@ -1,6 +1,6 @@
 import os.path
 from Telas import *
-from Telas.interações import *
+from Telas.TelaCadastroProduto import *
 
 
 class TelaDeFuncoes:
@@ -30,7 +30,6 @@ class TelaDeFuncoes:
         # None para que só abra quando clicar
         def abrir_cadastro(event=None):
             cadastrar_produto = CadastroProduto()
-            cadastrar_produto.iniciar()
 
         caminho_foto_cadastar = os.path.dirname(os.path.abspath(__file__))
         caminho_foto_cadastar_final = os.path.join(caminho_foto_cadastar, 'cadastrarproduto.png')

@@ -19,9 +19,14 @@ CREATE TABLE IF NOT EXISTS Produtos (
     [Descrição do Produto] TEXT NOT NULL,
     [Unidade de Medida] TEXT NOT NULL,
     Marca TEXT NOT NULL,
-    Tipo de Item TEXT NOT NULL,
+    [Tipo de Item] TEXT NOT NULL,
     NCM TEXT NOT NULL,
-    GTIN TEXT
+    GTIN TEXT,
+    Grupo TEXT NOT NULL,
+    SubGrupo TEXT NOT NULL,
+    CST TEXT NOT NULL,
+    [Alíquota de IPI] DECIMAL(3,2)
+    
 ) 
 """)
 
